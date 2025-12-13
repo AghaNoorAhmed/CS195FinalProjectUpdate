@@ -4,7 +4,10 @@ import cors from "cors";
 import dotenv from "dotenv";
 import habitRoutes from "./routes/habits.js";
 
+
 dotenv.config();
+console.log("URI:", process.env.MONGO_URI); // DEBUG LINE
+
 
 const app = express();
 app.use(cors({ origin: process.env.CLIENT_URL }));
