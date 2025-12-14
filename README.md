@@ -8,7 +8,7 @@ A full-stack web application for tracking daily habits and workouts with visual 
 ## 🌐 Live Demo
 
 - **Frontend**: [Deployed on Vercel](https://cs-195-final-project-update.vercel.app)
-- **Backend API**: Deployed on Render
+- **Backend API**: Deployed on Render: https://dashboard.render.com/web/srv-d4v7n52li9vc73dillj0/deploys/dep-d4v9156uk2gs73991qf0
 
 ## 📋 Table of Contents
 
