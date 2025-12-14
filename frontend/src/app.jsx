@@ -1,26 +1,17 @@
-import { useEffect, useState } from "react";
-import api from "./api";
-import HabitForm from "./components/HabitForm";
-import HabitList from "./components/HabitList";
-import WeeklyChart from "./components/WeeklyChart";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Home from "./components/Home";
+import About from "./components/About";
 
 function App() {
-  const [habits, setHabits] = useState([]);
-
-  const loadHabits = async () => {
-    const res = await api.get("/habits");
-    setHabits(res.data);
-  };
-
-  useEffect(() => { loadHabits(); }, []);
-
   return (
-    <div style={{ padding: 20 }}>
-      <h1>Your Daily Habits</h1>
-      <HabitForm onAdd={loadHabits} />
-      <HabitList habits={habits} onUpdate={loadHabits} />
-      <WeeklyChart />
-    </div>
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

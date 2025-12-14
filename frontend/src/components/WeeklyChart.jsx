@@ -1,23 +1,17 @@
-import { useEffect, useState } from "react";
-import api from "../api";
-import { LineChart, Line, XAxis, YAxis, Tooltip } from "recharts";
+import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts";
 
-export default function WeeklyChart() {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    api.get("/habits/stats/weekly").then(res => setData(res.data));
-  }, []);
-
+export default function WeeklyChart({ data }) {
   return (
-    <>
+    <div style={{ width: "100%", height: 300 }}>
       <h2>Weekly Progress</h2>
-      <LineChart width={400} height={250} data={data}>
-        <XAxis dataKey="day" />
-        <YAxis />
-        <Tooltip />
-        <Line dataKey="completed" stroke="#8884d8" />
-      </LineChart>
-    </>
+      <ResponsiveContainer width="100%" height="100%">
+        <LineChart data={data}>
+          <XAxis dataKey="day" />
+          <YAxis />
+          <Tooltip />
+          <Line dataKey="completed" stroke="#8884d8" />
+        </LineChart>
+      </ResponsiveContainer>
+    </div>
   );
 }
