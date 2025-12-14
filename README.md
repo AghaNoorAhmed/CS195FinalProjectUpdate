@@ -5,7 +5,7 @@ A full-stack web application for tracking daily habits and workouts with visual 
 ![Project Status](https://img.shields.io/badge/status-active-success.svg)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
-## 🌐 Live Demo
+## 🌐 Live Demo: https://drive.google.com/file/d/1vr-XRRt9DeHO6GjWc-8FxSE5nW9UkA3m/view?usp=sharing
 
 - **Frontend**: [Deployed on Vercel](https://cs-195-final-project-update.vercel.app)
 - **Backend API**: Deployed on Render: https://dashboard.render.com/web/srv-d4v7n52li9vc73dillj0/deploys/dep-d4v9156uk2gs73991qf0
