@@ -10,7 +10,20 @@ console.log("URI:", process.env.MONGO_URI); // DEBUG LINE
 
 
 const app = express();
-app.use(cors({ origin: process.env.CLIENT_URL }));
+const allowedOrigins = [
+  process.env.CLIENT_URL,
+  "https://cs-195-final-project-update-j2swvxtyo-aghanoorahmeds-projects.vercel.app"
+];
+
+app.use(cors({
+  origin: function (origin, callback) {
+    if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  }
+}));
 app.use(express.json());
 
 mongoose.connect(process.env.MONGO_URI)
