@@ -12,7 +12,8 @@ console.log("URI:", process.env.MONGO_URI); // DEBUG LINE
 const app = express();
 const allowedOrigins = [
   process.env.CLIENT_URL,
-  "https://cs-195-final-project-update-j2swvxtyo-aghanoorahmeds-projects.vercel.app"
+  "https://cs-195-final-project-update-j2swvxtyo-aghanoorahmeds-projects.vercel.app",
+  "https://cs-195-final-project-update.vercel.app"
 ];
 
 app.use(cors({
