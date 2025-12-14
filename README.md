@@ -19,7 +19,6 @@ A full-stack web application for tracking daily habits and workouts with visual 
 - [Environment Variables](#-environment-variables)
 - [API Endpoints](#-api-endpoints)
 - [Deployment](#-deployment)
-- [Screenshots](#-screenshots)
 - [Reflection](#-reflection)
 
 ## ✨ Features
@@ -252,22 +251,6 @@ Content-Type: application/json
 3. Whitelist IP addresses (or allow access from anywhere for production)
 4. Get connection string and add to backend `.env`
 
-## 📸 Screenshots
-
-> **Note**: Add screenshots of your application here
-
-### Home Page - Habit Tracker
-![Home Page](./screenshots/home.png)
-*Main dashboard showing habit list and completion tracking*
-
-### Weekly Progress Chart
-![Weekly Chart](./screenshots/chart.png)
-*Visual representation of weekly habit completion*
-
-### About Page
-![About Page](./screenshots/about.png)
-*Information about the project*
-
 ## 💭 Reflection
 
 ### Challenges Faced
@@ -284,9 +267,9 @@ If I were to approach this project again, I would:
 - **Add more advanced features** like habit streaks, reminders, and customizable goals
 
 ### Feedback Integration
-Based on instructor feedback, I narrowed the project scope to focus on delivering a solid MVP (Minimum Viable Product) with one strong advanced feature - the data visualization component. This allowed me to polish the core functionality rather than spreading effort too thin across multiple incomplete features.
+Based on user feedback, I narrowed the project scope to focus on delivering a solid MVP (Minimum Viable Product) with one strong advanced feature - the data visualization component. This allowed me to polish the core functionality rather than spreading effort too thin across multiple incomplete features.
 
-## 🎯 Future Enhancements
+## 🎯 Potential Future Enhancements
 
 - 🔐 User authentication and authorization
 - 📧 Email/push notifications for habit reminders
