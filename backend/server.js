@@ -10,22 +10,19 @@ console.log("URI:", process.env.MONGO_URI); // DEBUG LINE
 
 
 const app = express();
-const allowedOrigins = [
-  process.env.CLIENT_URL,
-  "https://cs-195-final-project-update-j2swvxtyo-aghanoorahmeds-projects.vercel.app",
-  "https://cs-195-final-project-update-pfybltloq-aghanoorahmeds-projects.vercel.app",
-  "https://cs-195-final-project-update.vercel.app"
-];
 
 app.use(cors({
   origin: function (origin, callback) {
-    console.log("Request origin:", origin);
-    if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
+    if (!origin) return callback(null, true);
+    
+    // Allow all vercel.app domains and localhost
+    if (origin.endsWith('.vercel.app') || origin.startsWith('http://localhost')) {
       callback(null, true);
     } else {
-      callback(new Error("Not allowed by CORS"));
+      callback(new Error('Not allowed by CORS'));
     }
-  }
+  },
+  credentials: true
 }));
 app.use(express.json());
 
