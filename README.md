@@ -310,7 +310,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 🙏 Acknowledgments
 
-- Thanks to CS195 instructors for guidance and feedback
+- Thanks to Professor Moore for guidance and feedback
 - Recharts library for excellent data visualization components
 - MongoDB Atlas for reliable cloud database hosting
 - Vercel and Render for seamless deployment experiences
